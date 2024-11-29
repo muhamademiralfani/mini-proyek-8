@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import NewsLetterComponent from '../components/NewsLetterComponent';
 
 const BlogDetail = () => {
   const posts = [
@@ -66,6 +67,7 @@ const BlogDetail = () => {
             fugiat sed quia qui, temporibus expedita, molestiae ex iure, est officiis! Tempore incidunt voluptatem atque recusandae? Delectus sapiente porro cupiditate dolor accusamus illo, itaque natus temporibus repellendus esse quisquam
             nihil aliquid. Illo, voluptatum necessitatibus dolorem voluptatem consectetur accusantium deserunt natus ad!
           </p>
+          <NewsLetterComponent />
         </div>
       </div>
     </div>
