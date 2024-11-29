@@ -5,10 +5,10 @@ import DarkModeToggle from '../components/DarkModeToggle';
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-between container mx-auto max-w-screen-xl py-5'>
-      <h1 className='font-semibold text-lg cursor-pointer'>
-        <Link to={'/'}>LumosBlog</Link>
-      </h1>
+    <nav className='flex justify-between container mx-auto max-w-screen-xl py-5 px-2'>
+      <Link to={'/'} className='font-semibold text-lg cursor-pointer'>
+        LumosBlog
+      </Link>
       <ul className='flex gap-5 font-normal text-xl text-center items-center'>
         <li>
           <Link to={'/blog'}>Blog</Link>
