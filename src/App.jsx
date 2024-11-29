@@ -6,6 +6,7 @@ import BlogDetail from './pages/BlogDetail';
 import Navbar from './layouts/Navbar';
 import NewsLetter from './pages/NewsLetter';
 import About from './pages/About';
+import Footer from './layouts/Footer';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/newsletter' element={<NewsLetter />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
