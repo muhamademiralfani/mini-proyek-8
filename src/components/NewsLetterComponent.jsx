@@ -3,7 +3,7 @@ import React from 'react';
 
 const NewsLetterComponent = () => {
   return (
-    <div className='flex flex-col gap-y-4 justify-center items-center text-center '>
+    <div className='flex flex-col gap-y-4 justify-center items-center mt-80 mb-20 text-center'>
       <span className='text-purple-600 text-base'>Newsletters</span>
       <h1 className='text-5xl font-semibold'>Stories and interviews</h1>
       <p className='text-[#667085] text-xl leading-10'>

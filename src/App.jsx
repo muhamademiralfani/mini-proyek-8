@@ -11,15 +11,16 @@ import Footer from './layouts/Footer';
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<BlogPage />} />
-        <Route path='/blog' element={<BlogPage />} />
-        <Route path='/blog/:id' element={<BlogDetail />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/newsletter' element={<NewsLetter />} />
-      </Routes>
-      <Footer />
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<BlogPage />} />
+          <Route path='/blog' element={<BlogPage />} />
+          <Route path='/blog/:id' element={<BlogDetail />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/newsletter' element={<NewsLetter />} />
+          <Route path='*' element={<BlogPage />} />
+        </Routes>
+        <Footer />
     </Router>
   );
 };

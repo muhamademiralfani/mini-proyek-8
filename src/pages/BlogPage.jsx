@@ -2,14 +2,14 @@
 import React from 'react';
 import HeaderComponent from '../components/HeaderComponent';
 import RecentBlog from '../components/RecentBlog';
-import BlogList from '../components/BlogList';
+import AllBlogList from '../components/AllBlogList';
 
 const BlogPage = () => {
   return (
     <div className='container mx-auto max-w-screen-xl py-5 px-2'>
       <HeaderComponent />
       <RecentBlog />
-      <BlogList />
+      <AllBlogList />
     </div>
   );
 };
