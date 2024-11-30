@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,7 +13,6 @@ const BlogDetailComponent = () => {
   const { blog, loading, error } = useSelector((state) => state.blog);
   console.log(blog);
   
-
   // Fetch blog details when the component mounts or when the id changes
   useEffect(() => {
     dispatch(fetchBlogDetail(originalId));
@@ -56,11 +54,11 @@ const BlogDetailComponent = () => {
   };
 
   return (
-    <>
+    <div className='px-4 md:px-8 lg:px-16'>
       <span className='text-sm text-purple-600 font-semibold'>{blog.date}</span>
-      <h1 className='text-4xl font-semibold my-8'>{blog.title}</h1>
+      <h1 className='text-3xl md:text-4xl font-semibold my-4 md:my-8'>{blog.title}</h1>
       <div className='flex flex-col gap-y-1 prose lg:prose-xl'>{parse(blog.content, options)}</div>
-    </>
+    </div>
   );
 };
 
