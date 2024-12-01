@@ -30,7 +30,7 @@ const RecentBlog = () => {
   console.log(recentBlog);
 
   return (
-    <main className='mt-8'>
+    <main className='mt-8 mb-8'>
       <h2 className='text-2xl font-semibold mb-6 '>Recent Blog Posts</h2>
 
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-0 lg:gap-x-8 justify-center items-center'>

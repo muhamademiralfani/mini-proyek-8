@@ -10,6 +10,7 @@ const initialState = {
   loading: false,
   error: null,
   isSuccess: false,
+  subscribed: false,
   currentPage: 1,
 };
 
@@ -26,6 +27,11 @@ export const fetchBlogs = createAsyncThunk('blog/fetchBlogs', async (page = 1) =
 export const fetchBlogDetail = createAsyncThunk('blog/fetchBlogDetail', async (id) => {
   const response = await axios.get(`${API_URL}/api/detail/${id}`);
   return response.data.results; // Adjust based on your API response structure
+});
+
+export const subscribe = createAsyncThunk('blog/subscribe', async (email) => {
+  const response = await axios.post(`${API_URL}/api/subscribe`, { email });
+  return response.data; // Adjust based on your API response structure
 });
 
 const blogSlice = createSlice({
@@ -86,6 +92,23 @@ const blogSlice = createSlice({
       })
       .addCase(fetchBlogDetail.rejected, (state, action) => {
         state.loading = false;
+        state.error = action.error.message;
+      });
+
+    builder
+      .addCase(subscribe.pending, (state) => {
+        state.loading = true;
+        state.subscribed = false;
+        state.error = null;
+      })
+      .addCase(subscribe.fulfilled, (state) => {
+        state.loading = false;
+        state.subscribed = true;
+        state.error = null;
+      })
+      .addCase(subscribe.rejected, (state, action) => {
+        state.loading = false;
+        state.subscribed = false;
         state.error = action.error.message;
       });
   },

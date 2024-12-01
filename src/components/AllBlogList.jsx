@@ -20,7 +20,7 @@ const AllBlogList = () => {
   };
 
   return (
-    <main className='mt-16'>
+    <main className='mt-8'>
       <h2 className='text-2xl font-semibold mb-6'>All Blog Post</h2>
       <div className={`grid grid-cols-1 md:grid-cols-2 ${loading ? 'lg:grid-cols-1' : 'lg:grid-cols-3'} gap-8`}>
         <BlogListComponent />
