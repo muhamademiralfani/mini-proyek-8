@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <footer className={`py-4 px-2 ${isDarkMode ? 'bg-dark text-white' : 'bg-white text-dark'} min-h-[60px]`}>
       <div className='container mx-auto max-w-screen-xl text-center md:text-left'>
-        <ul className='flex flex-col md:flex-row gap-x-4 gap-y-2 md:gap-y-0 font-normal text-xl'>
-          <div className='flex justify-center items-center gap-x-4'>
+        <div className='flex flex-col md:flex-row gap-x-4 gap-y-2 md:gap-y-0 font-normal text-xl'>
+          <ul className='flex justify-center items-center gap-x-4'>
             <li>© 2024</li>
             <li>
               <a href='' target='_blank' rel='noopener noreferrer'>
@@ -21,8 +21,8 @@ const Footer = () => {
                 LinkedIn
               </a>
             </li>
-          </div>
-          <div className='flex justify-center items-center gap-x-4'>
+          </ul>
+          <ul className='flex justify-center items-center gap-x-4'>
             <li>
               <a href='' target='_blank' rel='noopener noreferrer'>
                 Email
@@ -38,8 +38,8 @@ const Footer = () => {
                 Add to Feedly
               </a>
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </div>
     </footer>
   );
