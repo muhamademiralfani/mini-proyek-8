@@ -20,10 +20,6 @@ const BlogListComponent = () => {
     }
   }, [isSuccess, dispatch, currentPage]);
 
-  if (loading) {
-    return <LoadingPage />; // Show loading page while fetching
-  }
-
   if (error) {
     return <div>Error: {error}</div>;
   }
