@@ -10,7 +10,6 @@ const RecentBlog = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Fetch recent blogs only if they haven't been fetched yet
     if (!isSuccess && !loading) {
       dispatch(fetchRecentBlog());
     }
@@ -20,13 +19,9 @@ const RecentBlog = () => {
   const otherPosts = useMemo(() => recentBlog.slice(1, 3), [recentBlog]);
   const additionalPost = useMemo(() => recentBlog.slice(3, 4), [recentBlog]);
 
-  
-
   if (error) {
     return <div>Error: {error}</div>;
   }
-
-  // Memoize the recent blog posts to prevent unnecessary re-renders
 
   return (
     <main className='mt-8 mb-8'>
@@ -37,7 +32,7 @@ const RecentBlog = () => {
         {featuredPost.map((post) => (
           <Link to={`/blog/${encodeURIComponent(post.key)}`} key={post.key} className='col-span-1 md:col-span-2 lg:col-span-1 row-span-1 md:row-span-2'>
             <article className='group p-4 md:p-2 lg:p-0 overflow-hidden'>
-              <img src={post.thumb} alt='Office workspace' className='w-full h-[300px] object-cover' />
+              <img src={post.thumb} alt='Office workspace' className='w-full h-[300px] object-cover rounded-lg' />
               <div className='md:p-2 lg:p-0 mt-4 md:mt-4'>
                 <div className='flex items-center text-sm text-purple-600 mb-2'>
                   <span>{post.author}</span>
@@ -58,8 +53,8 @@ const RecentBlog = () => {
           <Link key={post.key} to={`/blog/${encodeURIComponent(post.key)}`}>
             <article className='lg:col-span-1 col-span-2 group p-4 md:p-2 lg:p-0 overflow-hidden'>
               <div className='lg:flex gap-4 md:flex'>
-                <div className='flex-shrink-0 mb-4 lg:mb-0 lg:px-0 md:px-0'>
-                  <img src={post.thumb} alt={post.title} className='w-full lg:w-[290px] md:w-[250px] h-full lg:h-[220px] md:h-[200px] object-cover' />
+                <div className='flex-shrink-0 mb-4 lg:mb-0'>
+                  <img src={post.thumb} alt={post.title} className='w-full lg:w-[290px] md:w-[250px] h-[200px] object-cover rounded-lg' />
                 </div>
                 <div className='flex-1 lg:px-4 md:p-0 p-0'>
                   <div className='flex items-center text-sm text-purple-600 mb-2'>
@@ -81,8 +76,8 @@ const RecentBlog = () => {
           <Link key={post.key} to={`/blog/${encodeURIComponent(post.key)}`}>
             <article className='lg:col-span-2 col-span-2 group p-4 md:p-2 lg:p-0'>
               <div className='lg:flex-row gap-4 md:flex sm:flex-col'>
-                <div className='flex-shrink-0 mb-4 lg:mb-0 lg:px-0 md:px-0'>
-                  <img src={post.thumb} alt={post.title} className='w-full lg:w-full h-full lg:h-[300px] md:h-[200px] object-cover' />
+                <div className='flex-shrink-0 mb-4 lg:mb-0'>
+                  <img src={post.thumb} alt={post.title} className='w-full lg:w-full h-[300px] object-cover rounded-lg' />
                 </div>
                 <div className='flex-1 lg:px-4 md:p-0 p-0'>
                   <div className='flex items-center text-sm text-purple-600 mb-2'>
