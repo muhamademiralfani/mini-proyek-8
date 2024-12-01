@@ -40,6 +40,7 @@ const blogSlice = createSlice({
   reducers: {
     setCurrentPage: (state, action) => {
       state.currentPage = action.payload;
+      
     },
     resetBlogs: (state) => {
       state.blogs = [];

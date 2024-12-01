@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBlogDetail } from '../redux/async/blogSlice';
@@ -9,14 +9,20 @@ import LoadingPage from '../pages/LoadingPage';
 const BlogDetailComponent = () => {
   const { id } = useParams();
   const originalId = decodeURIComponent(id);
+  const [blogDetail, setBlogDetail] = useState({});
+  const [loading, setLoading] = useState(true);
 
   const dispatch = useDispatch();
-  const { blog, loading, error } = useSelector((state) => state.blog);
+  const { blog, error } = useSelector((state) => state.blog);
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
 
   // Fetch blog details when the component mounts or when the id changes
   useEffect(() => {
-    dispatch(fetchBlogDetail(originalId));
+    if (!blog || blogDetail.title !== blog.title) {
+      dispatch(fetchBlogDetail(originalId));
+      setBlogDetail(blog);
+      setLoading(true);
+    }
   }, [dispatch, originalId]);
 
   if (error) {
@@ -26,6 +32,7 @@ const BlogDetailComponent = () => {
   if (!blog || Object.keys(blog).length === 0) {
     return <div>Blog not found</div>;
   }
+  
 
   const options = {
     replace: (domNode) => {
