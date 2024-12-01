@@ -12,7 +12,7 @@ const BlogDetailComponent = () => {
   const originalId = decodeURIComponent(id);
   const [blogDetail, setBlogDetail] = useState('');
   const dispatch = useDispatch();
-  const { blog, error } = useSelector((state) => state.blog);
+  const { blog, error, loading } = useSelector((state) => state.blog);
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
 
   // Fetch blog details when the component mounts or when the id changes
@@ -22,6 +22,10 @@ const BlogDetailComponent = () => {
       setBlogDetail(blog);
     }
   }, [dispatch, originalId, blog, blogDetail]);
+
+  if (loading) {
+    return <LoadingPage />;
+  }
 
   if (error) {
     return <div>Error: {error}</div>;
