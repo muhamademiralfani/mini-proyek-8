@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 const Pagination = ({ currentPage, totalPage, handleNextPageChange, handleBackPageChange }) => {
   return (
     <div className='flex justify-center mt-4 text-2xl'>
-      <button onClick={handleBackPageChange} className={`px-4 py-2 bg-white rounded-md mr-2 hover:bg-gray-300 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={currentPage === 1}>
+      <button onClick={handleBackPageChange}  className={`px-4 py-2 bg-white rounded-md mr-2 hover:bg-gray-300 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={currentPage === 1}>
         Previous
       </button>
       <div className='px-4 py-2 '>{currentPage}</div>

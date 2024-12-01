@@ -9,7 +9,7 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <button onClick={handleClick} className={`text-2xl ${!darkmode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'}  justify-between items-center rounded-3xl px-4 py-1 hidden md:flex`}>
+    <button onClick={handleClick}  className={`text-2xl ${!darkmode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'}  justify-between items-center rounded-3xl px-4 py-1  md:flex flex`}>
       {darkmode ? (
         <>
           <i className='bi bi-moon text-xl font-sm mr-2 text-[#090D1F]'></i>

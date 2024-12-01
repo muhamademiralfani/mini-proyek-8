@@ -8,17 +8,17 @@ import LoadingPage from '../pages/LoadingPage';
 
 const BlogListComponent = () => {
   const dispatch = useDispatch();
-  const { blogs, loading, error, isSuccess } = useSelector((state) => state.blog);
+  const { blogs, loading, error, isSuccess, currentPage } = useSelector((state) => state.blog);
 
   useEffect(() => {
-    dispatch(fetchBlogs()); // Mengambil blog berdasarkan currentPage
-  }, [dispatch]);
+    dispatch(fetchBlogs(currentPage)); // Mengambil blog berdasarkan currentPage
+  }, [dispatch, currentPage]);
 
   useEffect(() => {
     if (isSuccess) {
-      dispatch(fetchBlogs()); // Mengambil blog berdasarkan currentPage
+      dispatch(fetchBlogs(currentPage)); // Mengambil blog berdasarkan currentPage
     }
-  }, [isSuccess, dispatch]);
+  }, [isSuccess, dispatch, currentPage]);
 
   if (loading) {
     return (
