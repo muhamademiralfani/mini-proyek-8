@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -9,11 +10,11 @@ const Pagination = ({ currentPage, handleNextPageChange, handleBackPageChange })
 
   return (
     <div className={`flex justify-center mt-4 text-2xl ${isDarkMode ? 'text-white' : 'text-black'}`}>
-      <button onClick={handleBackPageChange} className={`px-4 py-2 rounded-md mr-2 hover:bg-gray-300 ${isDarkMode ? 'bg-[#090D1F] text-white hover:bg-gray-700' : 'bg-white text-black'}`} disabled={currentPage === 1}>
+      <button cy-data="pagination-prev-button" onClick={handleBackPageChange} className={`px-4 py-2 rounded-md mr-2 hover:bg-gray-300 ${isDarkMode ? 'bg-[#090D1F] text-white hover:bg-gray-700' : 'bg-white text-black'}`} disabled={currentPage === 1}>
         Previous
       </button>
-      <div className='px-4 py-2'>{currentPage}</div>
-      <button onClick={handleNextPageChange} className={`px-4 py-2 rounded-md ml-2 hover:bg-gray-300 ${isDarkMode ? 'bg-[#090D1F] text-white hover:bg-gray-700' : 'bg-white text-black'}`} disabled={currentPage === totalPage}>
+      <div className='current-page px-4 py-2' >{currentPage}</div>
+      <button onClick={handleNextPageChange} cy-data="pagination-next-button" className={`px-4 py-2 rounded-md ml-2 hover:bg-gray-300 ${isDarkMode ? 'bg-[#090D1F] text-white hover:bg-gray-700' : 'bg-white text-black'}`} disabled={currentPage === totalPage}>
         Next
       </button>
     </div>

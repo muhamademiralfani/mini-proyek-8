@@ -9,7 +9,7 @@ import LoadingPage from '../pages/LoadingPage';
 const BlogDetailComponent = () => {
   const { id } = useParams();
   const originalId = decodeURIComponent(id);
-  const [blogDetail, setBlogDetail] = useState({});
+  const [blogDetail, setBlogDetail] = useState('');
   const dispatch = useDispatch();
   const { blog, error } = useSelector((state) => state.blog);
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
@@ -20,7 +20,7 @@ const BlogDetailComponent = () => {
       dispatch(fetchBlogDetail(originalId));
       setBlogDetail(blog);
     }
-  }, [dispatch, originalId, blog, blogDetail.title]);
+  }, [dispatch, originalId, blog, blogDetail]);
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -28,6 +28,10 @@ const BlogDetailComponent = () => {
 
   if (!blog || Object.keys(blog).length === 0) {
     return <div>Blog not found</div>;
+  }
+
+  if (blogDetail === '' || blogDetail.title !== blog.title) {
+    return <div>Blog Not Found</div>;
   }
 
   const options = {

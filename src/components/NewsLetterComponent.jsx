@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -28,6 +29,7 @@ const NewsLetterComponent = () => {
         <div className=' flex flex-col '>
           <div className='flex gap-x-4'>
             <input
+              cy-data="newsletter-input"
               className='py-3 px-3 lg:h-[48px] lg:w-[360px] md:h-[40px] md:w-[300px] h-[35px] w-[250px] border border-[#D0D5DD] rounded-md focus:outline-[#7F56D9]'
               type='text'
               name='email'
@@ -35,7 +37,7 @@ const NewsLetterComponent = () => {
               placeholder='Email'
               onChange={onChange}
             />
-            <button type='submit' className='l:py-3 lg:px-6 md:py-2 md:px-4 py-1 px-2 text-sm lg:text-xl md:text-sm  bg-[#7F56D9] text-white rounded-md'>
+            <button cy-data="newsletter-button" type='submit' className='l:py-3 lg:px-6 md:py-2 md:px-4 py-1 px-2 text-sm lg:text-xl md:text-sm  bg-[#7F56D9] text-white rounded-md'>
               Subscribe
             </button>
           </div>

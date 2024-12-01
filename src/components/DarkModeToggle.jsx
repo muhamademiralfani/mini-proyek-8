@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 // components/DarkModeToggle.jsx
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,7 +13,7 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <button
+    <button cy-data="dark-mode-toggle"
       onClick={handleClick}
       className={`flex justify-between items-center rounded-3xl px-4 py-1 transition-all duration-300 ease-in-out 
         ${isDarkMode ? 'bg-white text-black' : 'bg-[#090D1F] text-white'}`}

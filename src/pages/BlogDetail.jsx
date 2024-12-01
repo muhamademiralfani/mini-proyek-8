@@ -1,7 +1,6 @@
 // BlogDetail.jsx
 import React, { Suspense, lazy } from 'react';
 import { useSelector } from 'react-redux';
-import LoadingPage from '../pages/LoadingPage';
 
 // Lazy load the components
 const NewsLetterComponent = lazy(() => import('../components/NewsLetterComponent'));

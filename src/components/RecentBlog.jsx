@@ -30,7 +30,7 @@ const RecentBlog = () => {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-0 lg:gap-x-8 justify-center items-center'>
         {/* Featured Post */}
         {featuredPost.map((post) => (
-          <Link to={`/blog/${encodeURIComponent(post.key)}`} key={post.key} className='col-span-1 md:col-span-2 lg:col-span-1 row-span-1 md:row-span-2'>
+          <Link to={`/blog/${encodeURIComponent(post.key)}`} key={post.key} cy-data="blog-detail" className='col-span-1 md:col-span-2 lg:col-span-1 row-span-1 md:row-span-2'>
             <article className='group p-4 md:p-2 lg:p-0 overflow-hidden'>
               <img src={post.thumb} alt='Office workspace' className='w-full h-[300px] object-cover rounded-lg' />
               <div className='md:p-2 lg:p-0 mt-4 md:mt-4'>
