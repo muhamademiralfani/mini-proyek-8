@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchBlogDetail } from '../redux/async/blogSlice';
 import parse from 'html-react-parser';
 import LoadingPage from '../pages/LoadingPage';
+import NotFoundBlog from './NotFoundBlog';
 
 const BlogDetailComponent = () => {
   const { id } = useParams();
@@ -27,11 +28,11 @@ const BlogDetailComponent = () => {
   }
 
   if (!blog || Object.keys(blog).length === 0) {
-    return <div>Blog not found</div>;
+    return <NotFoundBlog />;
   }
 
   if (blogDetail === '' || blogDetail.title !== blog.title) {
-    return <div>Blog Not Found</div>;
+    return <NotFoundBlog />;
   }
 
   const options = {

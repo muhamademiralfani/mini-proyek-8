@@ -28,7 +28,7 @@ const BlogListComponent = () => {
     <>
       {blogs.map((post) => (
         <Link key={post.key} to={`/blog/${encodeURIComponent(post.key)}`} onClick={() => dispatch(fetchBlogDetail(post.key))} className='p-4 md:p-2 lg:p-0'>
-          <img src={post.thumb} alt={post.title} className='w-full lg:h-80 md:h-56 h-60 object-cover ' />
+          <img src={post.thumb} alt={post.title} className='w-full lg:h-80 md:h-56 h-60 object-fill  ' />
           <div className='flex flex-col gap-y-4'>
             <div className='flex items-center text-sm text-purple-600 mt-6'>
               <span>{post.author}</span>

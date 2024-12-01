@@ -10,6 +10,7 @@ import Footer from './layouts/Footer';
 import { useSelector } from 'react-redux'; // Import useSelector to access Redux state
 import { SchemaProvider } from './context/SchemaContext';
 import NotFoundPage from './pages/NotFoundPage';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
@@ -20,7 +21,7 @@ const App = () => {
         <Router>
           <Navbar />
           <Routes>
-            <Route path='/' element={<BlogPage />} />
+            <Route path='/' element={<HomePage />} />
             <Route path='/blog' element={<BlogPage />} />
             <Route path='/blog/:id' element={<BlogDetail />} />
             <Route path='/about' element={<About />} />
