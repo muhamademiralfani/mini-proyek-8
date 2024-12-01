@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // LoadingPage.jsx
 import React from 'react';
 import { useSelector } from 'react-redux'; // Import useSelector to access Redux state

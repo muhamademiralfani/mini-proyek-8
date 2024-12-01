@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1733063613951" clover="3.2.0">
+  <project timestamp="1733063613951" name="All files">
+    <metrics statements="184" coveredstatements="112" conditionals="79" coveredconditionals="37" methods="82" coveredmethods="40" elements="345" coveredelements="189" complexity="0" loc="184" ncloc="184" packages="8" files="24" classes="24"/>
+    <package name="src">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="App.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\App.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="16" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="73" coveredstatements="59" conditionals="52" coveredconditionals="29" methods="34" coveredmethods="25"/>
+      <file name="AboutMeComponent.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\AboutMeComponent.jsx">
+        <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="44" count="21" type="cond" truecount="2" falsecount="0"/>
+        <line num="54" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="64" count="6" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="AllBlogList.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\AllBlogList.jsx">
+        <metrics statements="11" coveredstatements="7" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="2"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="20" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="10" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+      </file>
+      <file name="BlogListComponent.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\BlogListComponent.jsx">
+        <metrics statements="13" coveredstatements="9" conditionals="8" coveredconditionals="2" methods="6" coveredmethods="2"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="48" type="stmt"/>
+        <line num="10" count="92" type="stmt"/>
+        <line num="12" count="18" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="18" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="26" count="16" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="49" count="4" type="stmt"/>
+      </file>
+      <file name="DarkModeToggle.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\DarkModeToggle.jsx">
+        <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="2"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+      </file>
+      <file name="HeaderComponent.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\HeaderComponent.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+      <file name="HeroImage.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\HeroImage.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="NewsLetterComponent.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\NewsLetterComponent.jsx">
+        <metrics statements="11" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+      </file>
+      <file name="NotFoundBlog.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\NotFoundBlog.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="Pagination.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\Pagination.jsx">
+        <metrics statements="5" coveredstatements="4" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="40" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+      </file>
+      <file name="RecentBlog.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\components\RecentBlog.jsx">
+        <metrics statements="12" coveredstatements="11" conditionals="18" coveredconditionals="10" methods="6" coveredmethods="5"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="48" count="4" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.context">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="SchemaContext.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\context\SchemaContext.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="39" count="8" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layouts">
+      <metrics statements="9" coveredstatements="8" conditionals="8" coveredconditionals="5" methods="5" coveredmethods="4"/>
+      <file name="Footer.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\layouts\Footer.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+      <file name="Navbar.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\layouts\Navbar.jsx">
+        <metrics statements="6" coveredstatements="5" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="2"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="16" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages">
+      <metrics statements="27" coveredstatements="13" conditionals="16" coveredconditionals="2" methods="17" coveredmethods="4"/>
+      <file name="About.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\pages\About.jsx">
+        <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="BlogDetail.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\pages\BlogDetail.jsx">
+        <metrics statements="6" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="BlogPage.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\pages\BlogPage.jsx">
+        <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="HomePage.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\pages\HomePage.jsx">
+        <metrics statements="3" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="LoadingPage.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\pages\LoadingPage.jsx">
+        <metrics statements="3" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="NewsLetterPage.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\pages\NewsLetterPage.jsx">
+        <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="NotFoundPage.jsx" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\pages\NotFoundPage.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.redux">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\redux\index.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.redux.async">
+      <metrics statements="56" coveredstatements="15" conditionals="1" coveredconditionals="0" methods="19" coveredmethods="3"/>
+      <file name="blogSlice.js" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\redux\async\blogSlice.js">
+        <metrics statements="56" coveredstatements="15" conditionals="1" coveredconditionals="0" methods="19" coveredmethods="3"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="6" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="67" count="4" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="83" count="4" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="99" count="4" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="111" count="0" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="113" count="0" type="stmt"/>
+        <line num="118" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.redux.slice">
+      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="darkmodeSlice.js" path="C:\Users\UsEr\OneDrive\Dokumen\lumoshive\mini-proyek\mini-proyek-8\src\redux\slice\darkmodeSlice.js">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

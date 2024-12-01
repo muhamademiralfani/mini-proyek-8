@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // NewsLetterPage.jsx
 import React from 'react';
 import NewsLetterComponent from '../components/NewsLetterComponent';

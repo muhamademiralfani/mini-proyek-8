@@ -17,7 +17,7 @@ export default [
         sourceType: 'module',
       },
     },
-    settings: { react: { version: '18.3' } },
+    settings: { react: { version: 'detect' } }, // Menggunakan 'detect' untuk mendeteksi versi React
     plugins: {
       react,
       'react-hooks': reactHooks,
@@ -30,8 +30,8 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off', // Mematikan aturan ini untuk React 17+
+      'react/prop-types': 'off', // Mematikan aturan prop-types jika Anda tidak menggunakannya
     },
   },
 ];

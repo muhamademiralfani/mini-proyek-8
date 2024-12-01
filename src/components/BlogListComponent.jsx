@@ -4,11 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchBlogs, fetchBlogDetail } from '../redux/async/blogSlice';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import LoadingPage from '../pages/LoadingPage';
 
 const BlogListComponent = () => {
   const dispatch = useDispatch();
-  const { blogs, loading, error, isSuccess, currentPage } = useSelector((state) => state.blog);
+  const { blogs, error, isSuccess, currentPage } = useSelector((state) => state.blog);
 
   useEffect(() => {
     dispatch(fetchBlogs(currentPage)); // Fetch blogs based on currentPage
@@ -47,8 +46,6 @@ const BlogListComponent = () => {
   );
 };
 
-BlogListComponent.propTypes = {
-  slice: PropTypes.array,
-};
+
 
 export default BlogListComponent;

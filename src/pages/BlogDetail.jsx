@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // BlogDetail.jsx
 import React, { Suspense, lazy } from 'react';
 import { useSelector } from 'react-redux';

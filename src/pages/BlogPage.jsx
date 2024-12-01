@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import HeaderComponent from '../components/HeaderComponent';
 import RecentBlog from '../components/RecentBlog';

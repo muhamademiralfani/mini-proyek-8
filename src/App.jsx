@@ -17,8 +17,8 @@ const App = () => {
 
   return (
     <SchemaProvider>
-      <div className={`min-h-screen ${isDarkMode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'}`}>
-        <Router>
+      <Router>
+        <div className={`min-h-screen ${isDarkMode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'}`}>
           <Navbar />
           <Routes>
             <Route path='/' element={<HomePage />} />
@@ -29,8 +29,8 @@ const App = () => {
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
           <Footer />
-        </Router>
-      </div>
+        </div>
+      </Router>
     </SchemaProvider>
   );
 };

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
 // components/DarkModeToggle.jsx
 import React from 'react';

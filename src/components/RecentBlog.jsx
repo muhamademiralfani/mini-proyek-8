@@ -9,6 +9,10 @@ const RecentBlog = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(fetchRecentBlog());
+  }, [dispatch]);
+
+  useEffect(() => {
     if (!isSuccess && !loading) {
       dispatch(fetchRecentBlog());
     }

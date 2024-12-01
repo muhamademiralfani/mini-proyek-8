@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const API_URL = import.meta.env.VITE_API_URL;
+// const API_URL = 'https://lumoshive-academy-media-api.vercel.app';
 
 const initialState = {
   recentBlog: [],
@@ -40,7 +41,6 @@ const blogSlice = createSlice({
   reducers: {
     setCurrentPage: (state, action) => {
       state.currentPage = action.payload;
-      
     },
     resetBlogs: (state) => {
       state.blogs = [];
