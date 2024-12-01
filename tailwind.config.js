@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      colors: {
+        dark: '#090D1F',
+      },
     },
   },
   plugins: [],

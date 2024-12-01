@@ -1,17 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux'; // Import useSelector to access Redux state
 import DarkModeToggle from '../components/DarkModeToggle';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className='flex justify-between items-center container mx-auto max-w-screen-xl py-5 px-2'>
+    <nav className={`flex justify-between items-center container mx-auto max-w-screen-xl py-5 px-2 ${isDarkMode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'}`}>
       <Link to='/' className='font-semibold text-lg cursor-pointer'>
         LumosBlog
       </Link>
@@ -44,8 +46,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className='fixed inset-0 lg:hidden bg-white z-50 flex flex-col items-center justify-center transition-transform transform translate-y-0'>
-          <ul className='flex flex-col  gap-5 font-normal  justify-center items-center text-xl text-center w-full'>
+        <div className={`fixed inset-0 lg:hidden ${isDarkMode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'} z-50 flex flex-col items-center justify-center transition-transform transform translate-y-0`}>
+          <ul className='flex flex-col gap-5 font-normal justify-center items-center text-xl text-center w-full'>
             <li className='mb-12'>
               <Link to={'/'}>LumosBlog</Link>
             </li>

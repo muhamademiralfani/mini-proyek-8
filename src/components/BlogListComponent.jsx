@@ -20,13 +20,6 @@ const BlogListComponent = () => {
     }
   }, [isSuccess, dispatch, currentPage]);
 
-  if (loading) {
-    return (
-      <div className='flex items-center justify-center h-screen w-full'>
-        <LoadingPage />
-      </div>
-    );
-  }
   if (error) {
     return <div>Error: {error}</div>;
   }

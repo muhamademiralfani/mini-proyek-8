@@ -1,17 +1,19 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { fetchBlogs } from '../redux/async/blogSlice';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux'; // Import useSelector to access Redux state
 
-const Pagination = ({ currentPage, totalPage, handleNextPageChange, handleBackPageChange }) => {
+const Pagination = ({ currentPage, handleNextPageChange, handleBackPageChange }) => {
+  const totalPage = useSelector((state) => state.blog.totalPage);
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
+
   return (
-    <div className='flex justify-center mt-4 text-2xl'>
-      <button onClick={handleBackPageChange}  className={`px-4 py-2 bg-white rounded-md mr-2 hover:bg-gray-300 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={currentPage === 1}>
+    <div className={`flex justify-center mt-4 text-2xl ${isDarkMode ? 'text-white' : 'text-black'}`}>
+      <button onClick={handleBackPageChange} className={`px-4 py-2 rounded-md mr-2 hover:bg-gray-300 ${isDarkMode ? 'bg-[#090D1F] text-white hover:bg-gray-700' : 'bg-white text-black'}`} disabled={currentPage === 1}>
         Previous
       </button>
-      <div className='px-4 py-2 '>{currentPage}</div>
-      <button onClick={handleNextPageChange} className={`px-4 py-2 bg-white rounded-md ml-2 hover:bg-gray-300 ${currentPage === totalPage ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={currentPage === 10}>
+      <div className='px-4 py-2'>{currentPage}</div>
+      <button onClick={handleNextPageChange} className={`px-4 py-2 rounded-md ml-2 hover:bg-gray-300 ${isDarkMode ? 'bg-[#090D1F] text-white hover:bg-gray-700' : 'bg-white text-black'}`} disabled={currentPage === totalPage}>
         Next
       </button>
     </div>

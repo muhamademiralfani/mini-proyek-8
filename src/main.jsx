@@ -1,7 +1,9 @@
+// index.js
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { store } from './redux/index.js'; // Import only the store
+import { PersistGate } from 'redux-persist/integration/react'; // Import PersistGate
+import { store, persistor } from './redux/index.js'; // Import both store and persistor
 import './index.css';
 import App from './App.jsx';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -9,7 +11,11 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+        {' '}
+        {/* Wrap your App with PersistGate */}
+        <App />
+      </PersistGate>
     </Provider>
   </StrictMode>
 );

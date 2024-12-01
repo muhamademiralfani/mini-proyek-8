@@ -7,10 +7,14 @@ import Navbar from './layouts/Navbar';
 import NewsLetter from './pages/NewsLetterPage';
 import About from './pages/About';
 import Footer from './layouts/Footer';
+import { useSelector } from 'react-redux'; // Import useSelector to access Redux state
 
 const App = () => {
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
+
   return (
-    <Router>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'}`}>
+      <Router>
         <Navbar />
         <Routes>
           <Route path='/' element={<BlogPage />} />
@@ -21,7 +25,8 @@ const App = () => {
           <Route path='*' element={<BlogPage />} />
         </Routes>
         <Footer />
-    </Router>
+      </Router>
+    </div>
   );
 };
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,19 +9,15 @@ import LoadingPage from '../pages/LoadingPage';
 const BlogDetailComponent = () => {
   const { id } = useParams();
   const originalId = decodeURIComponent(id);
-  
+
   const dispatch = useDispatch();
   const { blog, loading, error } = useSelector((state) => state.blog);
-  console.log(blog);
-  
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
+
   // Fetch blog details when the component mounts or when the id changes
   useEffect(() => {
     dispatch(fetchBlogDetail(originalId));
   }, [dispatch, originalId]);
-
-  if (loading) {
-    return <LoadingPage />;
-  }
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -48,16 +45,16 @@ const BlogDetailComponent = () => {
           </span>
         ));
 
-        return <p className='mb-1 mt-1 text-gray-700 leading-relaxed'>{modifiedText}</p>;
+        return <p className={`mb-1 mt-1 leading-relaxed ${isDarkMode ? 'text-[#C0C5D0]' : 'text-gray-700'}`}>{modifiedText}</p>;
       }
     },
   };
 
   return (
-    <div className='px-4 md:px-8 lg:px-16'>
-      <span className='text-sm text-purple-600 font-semibold'>{blog.date}</span>
-      <h1 className='text-3xl md:text-4xl font-semibold my-4 md:my-8'>{blog.title}</h1>
-      <div className='flex flex-col gap-y-1 prose lg:prose-xl'>{parse(blog.content, options)}</div>
+    <div className={`px-4 md:px-8 lg:px-16 ${isDarkMode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'}`}>
+      <span className={`text-sm text-purple-600 font-semibold ${isDarkMode ? 'text-[#C0C5D0]' : 'text-purple-600'}`}>{blog.date}</span>
+      <h1 className={`text-3xl md:text-4xl font-semibold my-4 md:my-8 ${isDarkMode ? 'text-[#C0C5D0]' : 'text-black'}`}>{blog.title}</h1>
+      <div className={`flex flex-col gap-y-1 prose lg:prose-xl ${isDarkMode ? 'prose-invert' : ''}`}>{parse(blog.content, options)}</div>
     </div>
   );
 };
