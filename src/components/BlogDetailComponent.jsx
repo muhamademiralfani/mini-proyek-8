@@ -15,7 +15,7 @@ const BlogDetailComponent = () => {
   const { blog, error, loading } = useSelector((state) => state.blog);
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
 
-  // Fetch blog details when the component mounts or when the id changes
+  // Fetching blog detail ketik id berubah
   useEffect(() => {
     if (!blog || blogDetail.title !== blog.title) {
       dispatch(fetchBlogDetail(originalId));
@@ -39,6 +39,7 @@ const BlogDetailComponent = () => {
     return <NotFoundBlog />;
   }
 
+  // handle untuk tag image dan iframe serta p yang terdapat pada blog.content
   const options = {
     replace: (domNode) => {
       if (domNode.name === 'iframe') {
@@ -58,11 +59,11 @@ const BlogDetailComponent = () => {
         );
       }
       if (domNode.name === 'p') {
-        // Replace newlines with <span> for spacing
+        // memberikan spasi antar baris
         const modifiedText = domNode.children[0].data.split('\n').map((line, index) => (
           <span key={index}>
             {line}
-            {index < domNode.children[0].data.split('\n').length - 1 && <span className='block mb-1'></span>} {/* Add spacing between lines */}
+            {index < domNode.children[0].data.split('\n').length - 1 && <span className='block mb-1'></span>} {/*Menambahkan spasi antar baris*/}
           </span>
         ));
 
@@ -75,6 +76,7 @@ const BlogDetailComponent = () => {
     <div className={`px-4 md:px-8 lg:px-16 ${isDarkMode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'}`}>
       <span className={`text-sm text-purple-600 font-semibold ${isDarkMode ? 'text-[#C0C5D0]' : 'text-purple-600'}`}>{blog.date}</span>
       <h1 className={`text-3xl md:text-4xl font-semibold my-4 md:my-8 ${isDarkMode ? 'text-[#C0C5D0]' : 'text-black'}`}>{blog.title}</h1>
+      {/* Menggunakan parse untuk mengonversi HTML menjadi komponen React */}
       <div className={`flex flex-col gap-y-1 prose lg:prose-xl ${isDarkMode ? 'prose-invert' : ''}`}>{parse(blog.content, options)}</div>
     </div>
   );

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const BlogListComponent = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); // Mengambil fungsi dispatch dari Redux
   const { blogs, error, isSuccess, currentPage } = useSelector((state) => state.blog);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const BlogListComponent = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      dispatch(fetchBlogs(currentPage)); // Fetch blogs based on currentPage
+      dispatch(fetchBlogs(currentPage)); // Fetch blogs based on currentPage if isSuccess
     }
   }, [isSuccess, dispatch, currentPage]);
 
@@ -25,6 +25,7 @@ const BlogListComponent = () => {
 
   return (
     <>
+      {/* maping data dari api */}
       {blogs.map((post) => (
         <Link key={post.key} to={`/blog/${encodeURIComponent(post.key)}`} onClick={() => dispatch(fetchBlogDetail(post.key))} className='p-4 md:p-2 lg:p-0'>
           <img src={post.thumb} alt={post.title} className='w-full lg:h-80 md:h-56 h-60 object-fill  ' />
@@ -45,7 +46,5 @@ const BlogListComponent = () => {
     </>
   );
 };
-
-
 
 export default BlogListComponent;

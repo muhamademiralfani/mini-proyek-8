@@ -13,7 +13,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import HomePage from './pages/HomePage';
 
 const App = () => {
-  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Mendapatkan state mode gelap dari Redux
 
   return (
     <SchemaProvider>

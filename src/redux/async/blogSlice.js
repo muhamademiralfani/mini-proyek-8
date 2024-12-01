@@ -1,9 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+// Mengimport API_URL dari meta.env
 const API_URL = import.meta.env.VITE_API_URL;
-// const API_URL = 'https://lumoshive-academy-media-api.vercel.app';
 
+// Melakukan Initial State
 const initialState = {
   recentBlog: [],
   blogs: [],
@@ -39,6 +40,7 @@ const blogSlice = createSlice({
   name: 'blog',
   initialState,
   reducers: {
+    // Reducers untuk mengubah state yang tidak berhubungan dengan API
     setCurrentPage: (state, action) => {
       state.currentPage = action.payload;
     },
@@ -47,7 +49,9 @@ const blogSlice = createSlice({
       state.currentPage = 1;
     },
   },
+  // Extra reducers
   extraReducers: (builder) => {
+    // Menambahkan extra reducers fetchRecentBlog
     builder
       .addCase(fetchRecentBlog.pending, (state) => {
         state.loading = true;
@@ -63,7 +67,7 @@ const blogSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       });
-
+    // Menambahkan extra reducers fetchBlogs
     builder
       .addCase(fetchBlogs.pending, (state) => {
         state.loading = true;
@@ -79,7 +83,7 @@ const blogSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       });
-
+    // Menambahkan extra reducers fetchBlogDetail
     builder
       .addCase(fetchBlogDetail.pending, (state) => {
         state.loading = true;
@@ -95,7 +99,7 @@ const blogSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       });
-
+    // Menambahkan extra reducers subscribe
     builder
       .addCase(subscribe.pending, (state) => {
         state.loading = true;

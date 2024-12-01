@@ -6,19 +6,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleDarkMode } from '../redux/slice/darkModeSlice'; // Import the toggle action
 
 const DarkModeToggle = () => {
-  const dispatch = useDispatch();
-  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get the dark mode state from Redux
+  const dispatch = useDispatch(); // Mengambil fungsi dispatch dari Redux
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Mendapatkan state mode gelap dari Redux
 
   const handleClick = () => {
-    dispatch(toggleDarkMode()); // Dispatch the toggle action
+    dispatch(toggleDarkMode()); // Melakukan dispatch untuk mengubah mode gelap
   };
 
   return (
-    <button cy-data="dark-mode-toggle"
+    <button
+      cy-data='dark-mode-toggle'
       onClick={handleClick}
       className={`flex justify-between items-center rounded-3xl px-4 py-1 transition-all duration-300 ease-in-out 
-        ${isDarkMode ? 'bg-white text-black' : 'bg-[#090D1F] text-white'}`}
-    >
+        ${isDarkMode ? 'bg-white text-black' : 'bg-[#090D1F] text-white'}`}>
       {isDarkMode ? (
         <>
           <i className='bi bi-moon text-xl font-sm mr-2 text-[#090D1F]'></i>

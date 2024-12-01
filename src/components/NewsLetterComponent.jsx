@@ -12,6 +12,7 @@ const NewsLetterComponent = () => {
     setEmail(e.target.value);
   };
 
+  // menghandle submit dan melakukan dispatch ke subscribe
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(subscribe(email));
