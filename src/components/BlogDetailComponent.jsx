@@ -10,8 +10,6 @@ const BlogDetailComponent = () => {
   const { id } = useParams();
   const originalId = decodeURIComponent(id);
   const [blogDetail, setBlogDetail] = useState({});
-  const [loading, setLoading] = useState(true);
-
   const dispatch = useDispatch();
   const { blog, error } = useSelector((state) => state.blog);
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
@@ -21,9 +19,8 @@ const BlogDetailComponent = () => {
     if (!blog || blogDetail.title !== blog.title) {
       dispatch(fetchBlogDetail(originalId));
       setBlogDetail(blog);
-      setLoading(true);
     }
-  }, [dispatch, originalId]);
+  }, [dispatch, originalId, blog, blogDetail.title]);
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -32,7 +29,6 @@ const BlogDetailComponent = () => {
   if (!blog || Object.keys(blog).length === 0) {
     return <div>Blog not found</div>;
   }
-  
 
   const options = {
     replace: (domNode) => {
@@ -40,6 +36,15 @@ const BlogDetailComponent = () => {
         return (
           <div className='relative overflow-hidden pb-[56.25%] h-0 mb-4'>
             <iframe className='absolute top-0 left-0 w-full h-full border-0' src={domNode.attribs.src} title='Embedded content' allowFullScreen />
+          </div>
+        );
+      }
+      if (domNode.name === 'img') {
+        // Custom handling for <img> tags
+        const { src, alt } = domNode.attribs;
+        return (
+          <div className='flex justify-center mb-4'>
+            <img src={src} alt={alt || 'Image'} className={`w-full h-full rounded `} />
           </div>
         );
       }

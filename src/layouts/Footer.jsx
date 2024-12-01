@@ -6,7 +6,7 @@ const Footer = () => {
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode); // Get dark mode state
 
   return (
-    <footer className={`py-4 px-2 ${isDarkMode ? 'bg-[#090D1F] text-white' : 'bg-white text-black'}`}>
+    <footer className={`py-4 px-2 ${isDarkMode ? 'bg-dark text-white' : 'bg-white text-dark'} min-h-[60px]`}>
       <div className='container mx-auto max-w-screen-xl text-center md:text-left'>
         <ul className='flex flex-col md:flex-row gap-x-4 gap-y-2 md:gap-y-0 font-normal text-xl'>
           <div className='flex justify-center items-center gap-x-4'>
