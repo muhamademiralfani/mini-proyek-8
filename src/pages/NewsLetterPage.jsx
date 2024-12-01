@@ -6,10 +6,14 @@ import AllBlogList from '../components/AllBlogList';
 const NewsLetterPage = () => {
   return (
     <div className='container mx-auto max-w-screen-xl '>
-      <NewsLetterComponent />
-      <AllBlogList />
+      <div className='flex flex-col gap-y-4 justify-center items-center mt-20 mb-20 text-center'>
+        <div>
+          <NewsLetterComponent />
+        </div>
+        <AllBlogList />
+      </div>
     </div>
-  )
+  );
 };
 
 export default NewsLetterPage;

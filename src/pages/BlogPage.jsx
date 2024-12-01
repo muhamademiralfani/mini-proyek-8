@@ -7,7 +7,7 @@ import AllBlogList from '../components/AllBlogList';
 const BlogPage = () => {
   return (
     <div className='container mx-auto max-w-screen-xl py-5 px-2'>
-      <HeaderComponent />
+      <HeaderComponent>the blog</HeaderComponent>
       <RecentBlog />
       <AllBlogList />
     </div>

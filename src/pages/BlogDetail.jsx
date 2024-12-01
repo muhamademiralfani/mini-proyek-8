@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import NewsLetterComponent from '../components/NewsLetterComponent';
 import BlogDetailComponent from '../components/BlogDetailComponent';
@@ -16,9 +17,9 @@ const BlogDetail = () => {
         {/* Blog Detail and Newsletter on top for mobile */}
         <div className='col-span-1 md:col-span-3 order-1 md:order-2'>
           <BlogDetailComponent />
-          <NewsLetterComponent />
         </div>
       </div>
+      <NewsLetterComponent />
     </div>
   );
 };
